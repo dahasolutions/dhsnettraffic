@@ -1,0 +1,29 @@
+name: "DHs Traffic"
+version: "1.0.0"
+slug: "dhsnettraffic"
+description: "Network traffic tracking"
+image: "dahasolutions/dhsnettraffic"
+
+arch:
+  - amd64
+boot: "auto"
+ingress: true
+ingress_port: 80
+panel_icon: "mdi:server-network-outline"
+panel_title: "Net Traffic"
+startup: services
+
+options:
+  mysql_host: "localhost"
+  mysql_user: "homeassistant"
+  mysql_password: "homeassistant"
+  mysql_db: "traffic"
+
+schema:
+  mysql_host: str
+  mysql_user: str
+  mysql_password: password
+  mysql_db: str
+
+map:
+  - "config:rw"
