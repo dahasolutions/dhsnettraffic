@@ -15,6 +15,9 @@ RUN grep -q "^CustomLog" /etc/apache2/apache2.conf && \
     sed -i 's|^CustomLog .*|CustomLog /dev/null combined|g' /etc/apache2/apache2.conf || \
     echo "CustomLog /dev/null combined" >> /etc/apache2/apache2.conf
 
+RUN rm -f /var/log/apache2/access.log /var/log/apache2/error.log /var/log/apache2/other_vhosts_access.log
+RUN touch /var/log/apache2/access.log /var/log/apache2/error.log /var/log/apache2/other_vhosts_access.log
+
 # Sao chép mã nguồn web vào thư mục gốc của Apache
 COPY html /var/www/html/
 COPY run.sh /
