@@ -18,11 +18,5 @@ sed -i "s|MYSQL_USER|$MYSQL_USER|g" /var/www/html/config.php
 sed -i "s|MYSQL_PASSWORD|$MYSQL_PASSWORD|g" /var/www/html/config.php
 sed -i "s|MYSQL_DB|$MYSQL_DB|g" /var/www/html/config.php
 
-# Cấu hình Apache để hỗ trợ Ingress
-#echo "ServerName localhost" >> /etc/apache2/apache2.conf
-#a2enmod rewrite
-#service apache2 restart
-
 # Khởi động Apache ở chế độ foreground
-#exec httpd -DFOREGROUND
 exec apache2-foreground
