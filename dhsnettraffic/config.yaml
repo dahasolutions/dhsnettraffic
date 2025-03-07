@@ -1,5 +1,5 @@
 name: "DHs Net Traffic"
-version: "1.0.2"
+version: "1.0.3"
 slug: "dhsnettraffic"
 description: "Network traffic tracking"
 image: "dahasolutions/dhsnettraffic"
